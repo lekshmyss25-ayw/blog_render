@@ -126,11 +126,11 @@ li{
 
             const payload = { author, title, body, category };
             
-            let url = 'http://localhost:5000/posts';
+            let url = 'https://post-its-9az8.onrender.com/';
             let method = 'POST';
 
             if (currentEditingId) {
-                url = `http://localhost:5000/posts/${currentEditingId}`;
+                url = `https://post-its-9az8.onrender.com/${currentEditingId}`;
                 method = 'PUT';
             }
 
@@ -165,7 +165,7 @@ li{
             listContainer.innerHTML = "<li>Loading items...</li>";
             
            
-            let targetUrl = 'http://localhost:5000/posts';
+            let targetUrl = 'https://post-its-9az8.onrender.com/posts';
             if (searchQuery) {
                 targetUrl += `?search=${encodeURIComponent(searchQuery)}`;
             }
@@ -218,7 +218,7 @@ li{
          async function deletePostIt(id) {
             if (!confirm("Are you sure you want to remove this post-it note?")) return;
             try {
-                const response = await fetch(`http://localhost:5000/posts/${id}`, { method: "DELETE" });
+                const response = await fetch(`https://post-its-9az8.onrender.com/${id}`, { method: "DELETE" });
                 if (response.ok) {
                     document.getElementById("responseMsg").innerText = "Post-it deleted.";
                     document.getElementById("responseMsg").style.color = "green";
