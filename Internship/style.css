@@ -1,0 +1,27 @@
+ pop{ color: antiquewhite; font-family:'Courier New', Courier, monospace; font-size: 25px;border: 2px solid rgb(12, 213, 49); padding: 10px; border-radius: 20px; background-color: rgb(12, 213, 49);margin: 20px; text-decoration: none;}
+        pop:hover{background-color: rgb(13, 113, 18); }
+    .ger{ color:rgb(92, 29, 29);}
+    .intr{ color:antiquewhite; font-family:'Courier New', Courier, monospace; font-size: 65px;}
+    h1{ color: antiquewhite; font-family:'Courier New', Courier, monospace;}
+    h4{ color: antiquewhite; font-family: 'Times New Roman', Times, serif;}
+    p{ color: antiquewhite; font-family: 'Times New Roman', Times, serif;font-size: 20px;}
+        .menu{background-color: rgb(12, 213, 49);
+        color: antiquewhite; font-family: 'Times New Roman', Times, serif;
+    font-size: 20px; 
+display: flex; flex-wrap: wrap;; object-fit: cover; 
+          height:fit-content;
+            justify-content: center;
+            gap: 20px;}
+
+    .opt{ background-color: rgb(12, 213, 49);
+        color: rgb(22, 21, 20); margin:20px; padding:20px; border-radius: 20px;}
+
+    .opt:hover { transform:scale(1.0); background-color: rgb(5, 85, 9);color: antiquewhite; box-shadow: 0px 0px 20px rgb(12, 213, 49);}
+    a{ color:rgb(17, 16, 16);}
+    a:hover{ color: antiquewhite; text-decoration: none;}
+   body{ background-color: rgb(36, 33, 33);}
+   @media screen and (min-width: 600px) and (max-width: 1200px) {
+  body {
+    background-color: lightblue;
+  }
+}

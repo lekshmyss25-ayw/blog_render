@@ -126,11 +126,11 @@ li{
 
             const payload = { author, title, body, category };
             
-            let url = 'https://post-its-9az8.onrender.com/';
+            let url = 'https://onrender.com/';
             let method = 'POST';
 
             if (currentEditingId) {
-                url = `https://post-its-9az8.onrender.com/${currentEditingId}`;
+                url = `https://onrender.com/${currentEditingId}`;
                 method = 'PUT';
             }
 
@@ -153,6 +153,7 @@ li{
                     document.getElementById("responseMsg").style.color = "red";
                 }
             } catch (err) {
+                console.error("The exact error was:", err);
                 document.getElementById("responseMsg").innerText = "Network error connecting to backend.";
                 document.getElementById("responseMsg").style.color = "red";
             }
