@@ -1,0 +1,32 @@
+CREATE TABLE users (
+    user_id INT PRIMARY KEY,
+    username VARCHAR(50) NOT NULL UNIQUE,
+    email VARCHAR(100) NOT NULL UNIQUE,
+    password_hash VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE products (
+    product_id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL 
+);
+
+
+CREATE TABLE posts (
+    post_id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id INT NOT NULL,
+    title VARCHAR(150) NOT NULL,
+    content TEXT NOT NULL,
+    FOREIGN KEY (user_id) REFERENCES users(user_id) ON DELETE CASCADE
+);
+
+insert into users values(1,"ABC","ab@12gmail.com","12xx");
+insert into users values(2,"XYZ","xy@89gmail.com","89aa");
+
+insert into products values(101, "watch");
+insert into products values(102, "notes");
+
+insert into posts values (1,1,"HELLO","xxx");
+insert into posts values (2,1,"sample","hello_world");
+select * from users;
+select * from products;
+select * from posts;
